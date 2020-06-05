@@ -13,8 +13,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('movies', 'MovieApiController@index');
-Route::get('movies/{id}', 'MovieApiController@show');
-Route::post('movies', 'MovieApiController@store');
-Route::post('movies/{id}', 'MovieApiController@update');
-Route::get('movies/delete/{id}', 'MovieApiController@delete');
+Route::apiResource('movies', 'MovieController');
+
